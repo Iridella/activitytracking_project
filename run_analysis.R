@@ -44,7 +44,6 @@ run_analysis <- function(data_dir) {
     # 5. From the data set in step 4, creates a second, independent tidy data set with the 
     # average of each variable for each activity and each subject.
     ######################################################################################
-    ###controllare!!!!
     tidydataset2 <- aggregate(x=data_subset, by=list(subject=data_subset[,1],activity=data_subset[,2]), FUN="mean")
     tidydataset2 <- tidydataset2[,c(1,2,5:length(tidydataset2))]
     
