@@ -38,7 +38,7 @@ run_analysis <- function(data_dir) {
     # 3. Uses descriptive activity names to name the activities in the data set
     ###########################################################################
     data_subset[,2] <- activity_labels[,2][data_subset[,2]]
-    tidydataset1 <- data_subset
+    tidydataset <- data_subset
     
     ######################################################################################
     # 5. From the data set in step 4, creates a second, independent tidy data set with the 
@@ -49,5 +49,5 @@ run_analysis <- function(data_dir) {
     tidydataset2 <- tidydataset2[,c(1,2,5:length(tidydataset2))]
     
     
-    write.table(tidydataset2, "tidydata_step5.txt",row.name=FALSE)
+    write.table(tidydataset2, "tidydata_average.txt",row.name=FALSE)
 }
